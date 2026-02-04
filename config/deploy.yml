@@ -1,0 +1,21 @@
+service: home
+
+image: schrockwell/home
+
+servers:
+  web:
+    - kamal.schrockwell.com
+
+proxy:
+  ssl: true
+  host: home.schrockwell.com
+  app_port: 80
+  healthcheck:
+    path: /
+
+registry:
+  server: localhost:5555
+
+builder:
+  arch: amd64
+  remote: ssh://root@kamal.schrockwell.com

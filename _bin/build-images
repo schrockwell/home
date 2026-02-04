@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SRC_ROOT="_images"
+DST_ROOT="assets/images"
+
+THUMB_WIDTH=480
+FULL_WIDTH=2000
+
+THUMB_QUALITY=82
+FULL_QUALITY=88
+
+# Mild sharpening for thumbnails only (radiusxsigma+gain+threshold)
+THUMB_UNSHARP="1x0.8+1.0+0.02"
+
+shopt -s nullglob nocaseglob
+
+find "$SRC_ROOT" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | while read -r src; do
+  rel="${src#"$SRC_ROOT"/}"
+
+  full_dst="$DST_ROOT/full/$rel"
+  thumb_dst="$DST_ROOT/thumb/$rel"
+
+  # Skip if both outputs are newer than source
+  if [[ -f "$full_dst" && "$full_dst" -nt "$src" && -f "$thumb_dst" && "$thumb_dst" -nt "$src" ]]; then
+    echo "skip  $rel"
+    continue
+  fi
+
+  echo "build $rel"
+
+  mkdir -p "$(dirname "$full_dst")" "$(dirname "$thumb_dst")"
+
+  # Full size — resize only if wider than FULL_WIDTH, strip metadata
+  magick "$src" \
+    -resize "${FULL_WIDTH}x>" \
+    -quality "$FULL_QUALITY" \
+    -strip \
+    "$full_dst"
+
+  # Thumbnail — resize, sharpen, strip metadata
+  magick "$src" \
+    -resize "${THUMB_WIDTH}x>" \
+    -unsharp "$THUMB_UNSHARP" \
+    -quality "$THUMB_QUALITY" \
+    -strip \
+    "$thumb_dst"
+done

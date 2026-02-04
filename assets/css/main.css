@@ -23,3 +23,13 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
 }
+
+figure.img {
+    margin: 1em 0;
+    text-align: center;
+}
+
+figure.img img {
+    max-width: 100%;
+    height: auto;
+}

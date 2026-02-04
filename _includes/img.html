@@ -1,0 +1,20 @@
+{%- assign file = include.file -%}
+{%- assign alt  = include.alt | default: "" -%}
+{%- assign cap  = include.caption -%}
+{%- if include.slug -%}
+  {%- assign path = include.slug | append: "/" | append: file -%}
+{%- else -%}
+  {%- assign path = file -%}
+{%- endif -%}
+
+<figure class="img">
+  <a href="/assets/images/full/{{path}}" target="_blank" rel="noopener">
+    <img
+      src="/assets/images/thumb/{{path}}"
+      alt="{{ alt | escape }}"
+      loading="lazy"
+      decoding="async"
+    >
+  </a>
+  {%- if cap -%}<figcaption>{{ cap }}</figcaption>{%- endif -%}
+</figure>

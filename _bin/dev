@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Run initial image build
+_bin/build-images
+
+# Start Jekyll serve in background
+bundle exec jekyll serve --livereload &
+JEKYLL_PID=$!
+
+# Watch _images/ for changes and rebuild
+fswatch -o --latency 0.5 _images/ | while read -r _; do
+  _bin/build-images
+done &
+WATCH_PID=$!
+
+# Kill both on exit
+trap 'kill -INT $JEKYLL_PID $WATCH_PID 2>/dev/null' EXIT
+
+wait

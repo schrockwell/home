@@ -9,7 +9,7 @@ servers:
 proxy:
   ssl: true
   host: home.schrockwell.com
-  app_port: 80
+  app_port: 3000
   healthcheck:
     path: /
 

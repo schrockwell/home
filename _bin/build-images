@@ -35,15 +35,17 @@ find "$SRC_ROOT" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' 
 
   mkdir -p "$(dirname "$full_dst")" "$(dirname "$thumb_dst")"
 
-  # Full size — resize only if wider than FULL_WIDTH, strip metadata
+  # Full size — auto-orient, resize only if wider than FULL_WIDTH, strip metadata
   magick "$src" \
+    -auto-orient \
     -resize "${FULL_WIDTH}x>" \
     -quality "$FULL_QUALITY" \
     -strip \
     "$full_dst"
 
-  # Thumbnail — resize, sharpen, strip metadata
+  # Thumbnail — auto-orient, resize, sharpen, strip metadata
   magick "$src" \
+    -auto-orient \
     -resize "${THUMB_WIDTH}x>" \
     -unsharp "$THUMB_UNSHARP" \
     -quality "$THUMB_QUALITY" \

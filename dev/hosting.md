@@ -1,5 +1,5 @@
 ---
-title: How I host web applications
+title: How I deploy web applications
 toc: true
 ---
 
@@ -115,7 +115,7 @@ FROM lipanski/docker-static-website:latest
 COPY --from=builder /site/_site/ .
 ```
 
-*config/deploy.yml*
+*config/deploy.yml* (Kamal config)
 
 ```yaml
 service: myapp
@@ -141,3 +141,9 @@ builder:
   remote: ssh://root@kamal.example.com
 ```
 
+*_config.yml* (Jekyll config)
+
+```yaml
+exclude:
+  - config/deploy.yml
+```

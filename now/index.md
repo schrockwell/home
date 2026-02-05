@@ -26,9 +26,13 @@ Claude continues to be a huge boon for building and refactoring small, personal 
 
 I'm in the process of restoring a [Macintosh Classic II](https://everymac.com/systems/apple/mac_classic/specs/mac_classic_ii.html). It has been fully recapped and it boots up and functions well. The original hard drive even works. There is one remaining problem, an issue with the audio that I am trying to track down.
 
-## Media
+{% include img.html file="retro/mac-classic-ii/repair-1.jpeg" caption="It's alive!" %}
+
+## Media and Games
 
 We're really enjoying the nerd trivia game show [Um, Actually](https://watch.dropout.tv/um-actually).
+
+[Deep Rock Galactic](https://www.deeprockgalactic.com/) is our go-to chill co-op game right now.
 
 ## R.I.P. Bucky
 

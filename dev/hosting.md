@@ -1,9 +1,8 @@
 ---
+title: How I host web applications
 ---
 
 # How I host web applications
-
-*Updated February 5, 2026*
 
 I have a lot of solo side-projects. Many of them are web apps with very modest resource requirements. Managing their deployments isn't fun. And it's easy to forget how to do them in the months (or years) between releases.
 

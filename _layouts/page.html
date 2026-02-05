@@ -10,16 +10,18 @@
     <script>hljs.highlightAll();</script>
 </head>
 <body>
-    <header>
-        <a href="/">{{ site.title }}</a> ::
-        <a href="/now">now</a> ::
-        <a href="/dev">dev</a> ::
-        <a href="/retro">retro</a> ::
-        <a href="/misc">misc</a>
-    </header>
-    <main>
-        {% if page.title %}<h1 id="main-title">{{ page.title }}</h1>{% endif %}
-        {{ content | toc }}
-    </main>
+    <div id="container">
+        <header>
+            <a href="/">{{ site.title }}</a> ::
+            <a href="/now">now</a> ::
+            <a href="/dev">dev</a> ::
+            <a href="/retro">retro</a> ::
+            <a href="/misc">misc</a>
+        </header>
+        <main>
+            {% if page.title %}<h1 id="main-title">{{ page.title }}</h1>{% endif %}
+            {{ content | toc }}
+        </main>
+    </div>
 </body>
 </html>

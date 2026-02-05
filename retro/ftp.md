@@ -2,8 +2,6 @@
 title: FTP servers and clients
 ---
 
-# FTP servers and clients
-
 FTP is a convenient means of transferring data for vintage computers are are online but do not support SFTP.
 
 ## FTP clients

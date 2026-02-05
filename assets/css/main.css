@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+h1#main-title {
+    font-size: 1.75em;
+}
+
 header, main, footer {
     margin: auto;
     max-width: 800px;
@@ -52,4 +56,26 @@ p code {
 pre > code {
     line-height: 1.5em;
     border-radius: 0.5em;
+}
+
+ul#toc {
+    padding: 0.75em 1.5em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    float: right;
+    margin: 0 0 3em 3em;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    ul#toc {
+        float: none;
+        margin: 1em 0;
+    }
+}
+
+
+ul#toc li {
+    list-style: none;
 }

@@ -1,5 +1,5 @@
 ---
-title: Then
+title: What I was doing then
 ---
 
 *The archive of [/now](/now).*

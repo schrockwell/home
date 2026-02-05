@@ -8,8 +8,11 @@ servers:
 
 proxy:
   ssl: true
-  ssl_redirect: false
-  host: home.schrockwell.com
+  ssl_redirect: false # allow HTTP
+  hosts:
+    - home.schrockwell.com
+    - schrockwell.com
+    - www.schrockwell.com
   app_port: 3000
   healthcheck:
     path: /

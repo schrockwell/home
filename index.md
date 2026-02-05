@@ -5,7 +5,7 @@
     <img src="/assets/images/thumb/misc/headshot.jpeg" style="width: 100%; border-radius: 100%">
 </div>
 
-## Rockwell Schrock, here!
+# Rockwell Schrock, here!
 
 You might know me as [@schrockwell](https://mastodon.social/@schrockwell) around the web.
 

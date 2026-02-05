@@ -2,7 +2,7 @@
 title: Now
 ---
 
-## What I'm doing now
+# What I'm doing now
 
 *Updated February 5, 2026*
 

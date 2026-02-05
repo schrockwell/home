@@ -1,4 +1,6 @@
 ---
 ---
 
-    // TODO: Add retro computing resources
+```sh
+# TODO: Add retro computing resources
+```

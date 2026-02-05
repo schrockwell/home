@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/highlight/atom-one-dark.css">
+    <script src="/assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 <body>
     <header>
@@ -13,7 +16,6 @@
         <a href="/dev">dev</a> ::
         <a href="/retro">retro</a> ::
         <a href="/misc">misc</a>
-        <hr>
     </header>
     <main>
         {{ content }}

@@ -14,14 +14,14 @@ header, main, footer {
     padding: 0 0.5em;
 }
 
-p {
+p, ul, ol {
     line-height: 1.6em;
 }
 
 hr {
     border: none;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 3em 0;
 }
 
 figure.img {
@@ -38,4 +38,18 @@ figure.img figcaption {
     font-size: 0.9em;
     font-style: italic;
     margin: 0.5em 0 1em 0;
+}
+
+code {
+    font-size: 0.8em;
+}
+
+p code {
+    background-color: #eee;
+    padding: 0.2em 0.4em;
+}
+
+pre > code {
+    line-height: 1.5em;
+    border-radius: 0.5em;
 }

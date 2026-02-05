@@ -2,9 +2,11 @@
 title: Now
 ---
 
-# Now
+## What I'm doing now
 
-You can also read what happened [then](/then).
+*Updated February 5, 2026*
+
+*This is a [now page](https://sive.rs/nowff). You can also see what happened [then](/then).*
 
 ## Work
 
@@ -14,7 +16,7 @@ At RHR, we have been working hard supporting the [Desecho Island DXpedition](htt
 
 At TRMNL we're busy preparing for the launch of the bigger, badder, more capable [TRMNL X](https://www.youtube.com/watch?v=D0wQ8gCxCvw).
 
-## Software Development
+## Programming
 
 With the assist from Claude, I put together [Stupidly-Simple Environments (SSE)](https://github.com/schrockwell/sse), a tool for managing secret environment variables from development to production.
 
@@ -24,8 +26,14 @@ Claude continues to be a huge boon for building and refactoring small, personal 
 
 ## Vintage Tech
 
-I'm in the process of restoring a [Macintosh Classic II](https://everymac.com/systems/apple/mac_classic/specs/mac_classic_ii.html). It has been fully recapped and it boots up and functions well. The original hard drive even works. There is an issue with the audio that I am trying to track down. The floppy drive needs to be rebuilt as well.
+I'm in the process of restoring a [Macintosh Classic II](https://everymac.com/systems/apple/mac_classic/specs/mac_classic_ii.html). It has been fully recapped and it boots up and functions well. The original hard drive even works. There is one remaining problem, an issue with the audio that I am trying to track down.
 
 ## Media
 
 We're really enjoying the nerd trivia game show [Um, Actually](https://watch.dropout.tv/um-actually).
+
+## R.I.P. Bucky
+
+We had to say goodbye to our cat Bucky after 13 years. Adopted as a stray named *Cassanova*, he traveled with us across the country, through many homes, jobs, ups, and downs. He was – and will always be – the goodest boy.
+
+{% include img.html file="misc/bucky.jpeg" caption="Buck-Buck in 2023" %}

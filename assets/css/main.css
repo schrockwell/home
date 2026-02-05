@@ -33,3 +33,9 @@ figure.img img {
     max-width: 100%;
     height: auto;
 }
+
+figure.img figcaption {
+    font-size: 0.9em;
+    font-style: italic;
+    margin: 0.5em 0 1em 0;
+}

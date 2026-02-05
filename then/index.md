@@ -2,9 +2,7 @@
 title: Then
 ---
 
-# Then
-
-The archive of [/now](/now).
+*The archive of [/now](/now).*
 
 <ul>
   {% for page in site.categories.then %}

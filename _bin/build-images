@@ -15,6 +15,10 @@ THUMB_UNSHARP="1x0.8+1.0+0.02"
 
 shopt -s nullglob nocaseglob
 
+# Clean the destination directories
+rm -rf "$DST_ROOT"/{full,thumb}
+mkdir -p "$DST_ROOT"/{full,thumb}
+
 find "$SRC_ROOT" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | while read -r src; do
   rel="${src#"$SRC_ROOT"/}"
 

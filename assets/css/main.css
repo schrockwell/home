@@ -113,6 +113,18 @@ p:last-child, ul:last-child, ol:last-child {
     margin-bottom: 0;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         color: #b5aea6;
@@ -133,6 +145,30 @@ p:last-child, ul:last-child, ol:last-child {
 
     ul#toc {
         background-color: #23201e;
+        border: 1px solid #3a3632;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid #d4cec6;
+    font-size: 0.9em;
+}
+
+table th, table td {
+    border: 1px solid #d4cec6;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+@media (prefers-color-scheme: dark) {
+    table {
+        border: 1px solid #3a3632;
+    }
+
+    table th, table td {
         border: 1px solid #3a3632;
     }
 }

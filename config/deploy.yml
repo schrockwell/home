@@ -2,6 +2,8 @@ service: home
 
 image: schrockwell/home
 
+retain_containers: 1
+
 servers:
   web:
     - kamal.schrockwell.com

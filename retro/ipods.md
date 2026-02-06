@@ -2,7 +2,7 @@
 title: iPod collection
 ---
 
-{% include img.html file="retro/ipods.jpeg" %}
+{% include img.html src="retro/ipods.jpeg" %}
 
 [Identify your iPod model - Apple Support](https://support.apple.com/en-us/103823)
 

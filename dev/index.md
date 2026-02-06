@@ -2,8 +2,6 @@
 title: Programming resources
 ---
 
-## Artices
-
 [How I host web applications](/dev/hosting.html) in {{ "now" | date: "%Y" }}
 
 ## Today's development stack

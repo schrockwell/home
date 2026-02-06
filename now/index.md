@@ -26,7 +26,7 @@ Claude continues to be a huge boon for building and refactoring small, personal 
 
 I'm in the process of restoring a [Macintosh Classic II](https://everymac.com/systems/apple/mac_classic/specs/mac_classic_ii.html). It has been fully recapped and it boots up and functions well. The original hard drive even works. There is one remaining problem, an issue with the audio that I am trying to track down.
 
-{% include img.html file="retro/mac-classic-ii/repair-1.jpeg" caption="It's alive!" %}
+{% include img.html src="retro/mac-classic-ii/repair-1.jpeg" caption="It's alive!" %}
 
 ## Media and Games
 
@@ -38,4 +38,4 @@ We're really enjoying the nerd trivia game show [Um, Actually](https://watch.dro
 
 We had to say goodbye to our cat Bucky after 13 years. Adopted as a stray named *Cassanova*, he traveled with us across the country, through many homes, jobs, ups, and downs. He was – and will always be – the goodest boy.
 
-{% include img.html file="misc/bucky.jpeg" caption="Buck-Buck in 2023" %}
+{% include img.html src="misc/bucky.jpeg" caption="Buck-Buck in 2023" %}

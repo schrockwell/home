@@ -1,10 +1,10 @@
-{%- assign file = include.file -%}
+{%- assign src = include.src -%}
 {%- assign alt  = include.alt | default: "" -%}
 {%- assign cap  = include.caption -%}
 {%- if include.slug -%}
-  {%- assign path = include.slug | append: "/" | append: file -%}
+  {%- assign path = include.slug | append: "/" | append: src -%}
 {%- else -%}
-  {%- assign path = file -%}
+  {%- assign path = src -%}
 {%- endif -%}
 
 <figure class="img">

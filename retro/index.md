@@ -6,6 +6,8 @@ title: Retro tech
 
 [Modern AIM & ICQ](/retro/aim.html)
 
+[Classic Mac resources](/retro/mac.html)
+
 ---
 
 ## The collection

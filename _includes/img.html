@@ -1,6 +1,6 @@
 {%- assign src = include.src -%}
-{%- assign alt = include.alt | default: "" -%}
-{%- assign cap = include.caption -%}
+{%- assign cap = include.caption | default: "" -%}
+{%- assign alt = include.alt | default: cap -%}
 
 {%- assign full_path = "/assets/images/full/" | append: src -%}
 {%- assign href = include.href | default: full_path -%}

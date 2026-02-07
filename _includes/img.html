@@ -1,16 +1,14 @@
 {%- assign src = include.src -%}
-{%- assign alt  = include.alt | default: "" -%}
-{%- assign cap  = include.caption -%}
-{%- if include.slug -%}
-  {%- assign path = include.slug | append: "/" | append: src -%}
-{%- else -%}
-  {%- assign path = src -%}
-{%- endif -%}
+{%- assign alt = include.alt | default: "" -%}
+{%- assign cap = include.caption -%}
+
+{%- assign full_path = "/assets/images/full/" | append: src -%}
+{%- assign href = include.href | default: full_path -%}
 
 <figure class="img">
-  <a href="/assets/images/full/{{path}}" target="_blank" rel="noopener">
+  <a href="{{ href }}" target="_blank" rel="noopener">
     <img
-      src="/assets/images/thumb/{{path}}"
+      src="/assets/images/thumb/{{src}}"
       alt="{{ alt | escape }}"
       loading="lazy"
       decoding="async"

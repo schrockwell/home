@@ -18,7 +18,7 @@ At TRMNL we're busy preparing for the launch of the bigger, badder, more capable
 
 With the assist from Claude, I put together [Stupidly-Simple Environments (SSE)](https://github.com/schrockwell/sse), a tool for managing secret environment variables from development to production.
 
-Now that [Kamal supports local container registries](https://kamal-deploy.org/docs/configuration/docker-registry/#using-a-local-container-registry), that was the final motivation I needed to unify my apps with a single deployment strategy. Ruby, Elixir, Go, static sites... they're all Dockerized now. This reduces a ton of friction for iterating on these applications, especially since they're revisited very infrequently. And they all use [SSE](https://github.com/schrockwell/sse) now.
+Now that [Kamal supports local container registries](https://kamal-deploy.org/docs/configuration/docker-registry/#using-a-local-container-registry), that was the final motivation I needed to unify my apps with a [single deployment strategy](/dev/hosting.html). Ruby, Elixir, Go, static sites... they're all Dockerized now. This reduces a ton of friction for iterating on these applications, especially since they're revisited very infrequently. And they all use [SSE](https://github.com/schrockwell/sse) now.
 
 Claude continues to be a huge boon for building and refactoring small, personal projects. For example, it rewrote a basic Ruby Sinatra API into a standalone Go binary, reducing the Docker image from 90 MB to 9 MB, and it's blazing-fast.
 

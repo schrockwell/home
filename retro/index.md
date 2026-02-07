@@ -6,6 +6,8 @@ title: Retro tech
 
 [Modern AIM & ICQ](/retro/aim.html)
 
+---
+
 ## The collection
 
 ### Apple

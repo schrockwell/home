@@ -18,26 +18,26 @@ They are constructed from MDF with a printed map glued on top. LEDs shine throug
 | LIFR (Low IFR)                | Magenta |
 
 
-{% include img.html src="hw/metar/hero.jpeg" alt="METAR map of the northeast" caption="The first map of the northeast" %}
+{% include img.html src="metar/hero.jpeg" alt="METAR map of the northeast" caption="The first map of the northeast" %}
 
-{% include img.html src="hw/metar/hero-2.jpeg" alt="METAR map of southern Florida" caption="The second map of southern Florida" %}
+{% include img.html src="metar/hero-2.jpeg" alt="METAR map of southern Florida" caption="The second map of southern Florida" %}
 
 ---
 
 ## Build process
 
-{% include img.html src="hw/metar/build-1.jpeg" caption="Testing out WS2812 LEDs" %}
+{% include img.html src="metar/build-1.jpeg" caption="Testing out WS2812 LEDs" %}
 
-{% include img.html src="hw/metar/build-2.jpeg" caption="Tracing every airport from the printed map" %}
+{% include img.html src="metar/build-2.jpeg" caption="Tracing every airport from the printed map" %}
 
-{% include img.html src="hw/metar/build-3.jpeg" caption="Transferring airport locations to MDF using an awl" %}
+{% include img.html src="metar/build-3.jpeg" caption="Transferring airport locations to MDF using an awl" %}
 
-{% include img.html src="hw/metar/build-4.jpeg" caption="Drilling 1/4 inch holes for each airport" %}
+{% include img.html src="metar/build-4.jpeg" caption="Drilling 1/4 inch holes for each airport" %}
 
-{% include img.html src="hw/metar/build-5.jpeg" caption="Gluing LEDs through the MDF" %}
+{% include img.html src="metar/build-5.jpeg" caption="Gluing LEDs through the MDF" %}
 
-{% include img.html src="hw/metar/build-6.jpeg" caption="First light!" %}
+{% include img.html src="metar/build-6.jpeg" caption="First light!" %}
 
-{% include img.html src="hw/metar/build-7.jpeg" caption="Shining through the glued-on map" %}
+{% include img.html src="metar/build-7.jpeg" caption="Shining through the glued-on map" %}
 
-{% include img.html src="hw/metar/hero.jpeg" caption="With the custom frame" %}
+{% include img.html src="metar/hero.jpeg" caption="With the custom frame" %}

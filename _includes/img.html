@@ -3,10 +3,18 @@
 {%- assign alt = include.alt | default: cap -%}
 
 {%- comment -%}
-  Parse src path: "hw/metar/hero.jpeg" -> dir="hw/metar", file="hero.jpeg"
-  Construct paths: /hw/metar/images/thumb/hero.jpeg
+  Supports both relative and absolute paths:
+    Relative: src="metar/hero.jpeg" (resolved from page.dir)
+    Absolute: src="/hw/metar/hero.jpeg" (starts with /)
 {%- endcomment -%}
-{%- assign src_parts = src | split: "/" -%}
+{%- assign first_char = src | slice: 0 -%}
+{%- if first_char == "/" -%}
+  {%- assign full_src = src | slice: 1, 9999 -%}
+{%- else -%}
+  {%- assign full_src = page.dir | append: src | remove_first: "/" -%}
+{%- endif -%}
+
+{%- assign src_parts = full_src | split: "/" -%}
 {%- assign src_file = src_parts | last -%}
 {%- assign dir_parts = src_parts | pop -%}
 {%- assign src_dir = dir_parts | join: "/" -%}

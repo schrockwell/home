@@ -4,7 +4,7 @@ title: ESPHome analog meter
 
 *Converting an analog Western Electric meter to be used as a smart home gauge with ESPHome*
 
-{% include img.html src="hw/meter/hero.jpeg" alt="ESPHome analog meter" %}
+{% include img.html src="meter/hero.jpeg" alt="ESPHome analog meter" %}
 
 ## Components
 - [NodeMCU ESP32](https://amzn.to/4dsGXc0)
@@ -17,7 +17,7 @@ title: ESPHome analog meter
 
 ## ESPHome config
 
-{% include img.html src="hw/meter/build-1.png" alt="ESP32 pinout" %}
+{% include img.html src="meter/build-1.png" alt="ESP32 pinout" %}
 
 ```yaml
 output:
@@ -39,8 +39,8 @@ number:
 
 ## Gallery
 
-{% include img.html src="hw/meter/build-2.jpeg" caption="Internals" %}
+{% include img.html src="meter/build-2.jpeg" caption="Internals" %}
 
-{% include img.html src="hw/meter/build-3.jpeg" caption="Jammed in the enclosure" %}
+{% include img.html src="meter/build-3.jpeg" caption="Jammed in the enclosure" %}
 
-{% include img.html src="hw/meter/build-4.jpeg" caption="Mounted to the back of the meter" %}
+{% include img.html src="meter/build-4.jpeg" caption="Mounted to the back of the meter" %}

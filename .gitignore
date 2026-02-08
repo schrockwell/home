@@ -4,4 +4,7 @@ _site
 .jekyll-metadata
 vendor
 .DS_Store
-/assets/images
+
+# Generated images
+**/images/full/
+**/images/thumb/

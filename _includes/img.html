@@ -2,13 +2,23 @@
 {%- assign cap = include.caption | default: "" -%}
 {%- assign alt = include.alt | default: cap -%}
 
-{%- assign full_path = "/assets/images/full/" | append: src -%}
+{%- comment -%}
+  Parse src path: "hw/metar/hero.jpeg" -> dir="hw/metar", file="hero.jpeg"
+  Construct paths: /hw/metar/images/thumb/hero.jpeg
+{%- endcomment -%}
+{%- assign src_parts = src | split: "/" -%}
+{%- assign src_file = src_parts | last -%}
+{%- assign dir_parts = src_parts | pop -%}
+{%- assign src_dir = dir_parts | join: "/" -%}
+
+{%- assign thumb_path = "/" | append: src_dir | append: "/images/thumb/" | append: src_file -%}
+{%- assign full_path = "/" | append: src_dir | append: "/images/full/" | append: src_file -%}
 {%- assign href = include.href | default: full_path -%}
 
 <figure class="img">
   <a href="{{ href }}" rel="noopener">
     <img
-      src="/assets/images/thumb/{{src}}"
+      src="{{ thumb_path }}"
       alt="{{ alt | escape }}"
       loading="lazy"
       decoding="async"

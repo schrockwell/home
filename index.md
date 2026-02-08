@@ -2,7 +2,7 @@
 ---
 
 <div style="float: right; margin: 0 0 3em 3em; max-width: 30%">
-    <img src="/assets/images/thumb/misc/headshot.jpeg" style="width: 100%; border-radius: 100%">
+    <img src="/misc/images/thumb/headshot.jpeg" style="width: 100%; border-radius: 100%">
 </div>
 
 # Rockwell Schrock, here!

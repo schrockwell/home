@@ -57,14 +57,13 @@ Add an `A` record for `*.example.com` directly to your VM.
 
 Any new apps deployed the hostname `[appname].example.com` will "just work" with TLS when you deploy them for the first time, since Let's Encrypt will be able to find the server without waiting for DNS to propagate. Once you confirm the deploy works, the hostname can be changed to its final value.
 
-### Build images on the server itself
+### Build x64 images locally 
 
-If your local CPU architecture doesn't match the server's (e.g. Apple Silicon vs x64), the image can't be built locally. It won't be the fastest, and it might cause your production server to chug, but it's the simplest solution with zero external dependencies.
+Even on ARM devices like Apple Silicon, you can still build x64 images locally via `buildx`. Don't try to run builds on your deployment box, since they can be resource-intensive and cause downtime for your live apps.
 
 ```yml
 builder:
   arch: amd64
-  remote: ssh://root@kamal.example.com
   ```
 
 ### Use the local image registry
@@ -138,7 +137,6 @@ registry:
 
 builder:
   arch: amd64
-  remote: ssh://root@kamal.example.com
 ```
 
 *_config.yml* (Jekyll config)

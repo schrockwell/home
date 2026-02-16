@@ -30,4 +30,4 @@ title: Programming resources
  
 - [asdf](https://asdf-vm.com/) - runtime management for Ruby, Node, Go, Elixir, etc.
 - [direnv](https://direnv.net/) - local environment vars
-- [sse](https://claude.ai/login) - secrets management
+- [sse](https://github.com/schrockwell/sse) - secrets management

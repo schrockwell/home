@@ -8,6 +8,8 @@ title: Retro tech
 
 [Classic Mac resources](/retro/mac.html)
 
+[Access HFS floppies with hfsutils](/retro/hfsutils.html)
+
 ---
 
 ## The collection

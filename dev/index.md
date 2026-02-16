@@ -4,6 +4,8 @@ title: Programming resources
 
 [How I host web applications](/dev/hosting.html) in {{ "now" | date: "%Y" }}
 
+[GBCMR - An Online Gallery for Game Boy Camera](/dev/gbcmr.html)
+
 ---
 
 ## Today's development stack

@@ -10,6 +10,8 @@ title: Retro tech
 
 [Access HFS floppies with hfsutils](/retro/hfsutils.html)
 
+[Palm handhelds](/retro/palm.html)
+
 ---
 
 ## The collection

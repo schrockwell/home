@@ -2,7 +2,7 @@
 title: Modern AIM & ICQ
 toc: true
 hero:
-    src: retro/aim.png
+    src: /retro/aim.png
     alt: AIM client running on macOS
 ---
 

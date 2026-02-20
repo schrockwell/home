@@ -4,7 +4,7 @@ title: Programming resources
 
 [How I host web applications](/dev/hosting.html) in {{ "now" | date: "%Y" }}
 
-[GBCMR - An Online Gallery for Game Boy Camera](/dev/gbcmr.html)
+{% include img.html class="card" src="/dev/gbcmr/hero.jpeg" href="/dev/gbcmr.html" title="GBCMR" caption="Pairing Game Boy Camera with TRMNL" %}
 
 ---
 

@@ -74,6 +74,35 @@ figure.img figcaption {
     margin: 0.5em 0 1em 0;
 }
 
+figure.card {
+    display: flex;
+    margin: 0 0 2em 0;
+    gap: 2em;
+}
+
+figure.card > a {
+    display: block;
+    flex: 1;
+}
+
+figure.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+figure.card figcaption {
+    flex: 1;
+    line-height: 1.5em;
+}
+
+figure.card figcaption .title {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
 code {
     font-size: 0.8em;
 }

@@ -1,6 +1,8 @@
 {%- assign src = include.src -%}
-{%- assign cap = include.caption | default: "" -%}
-{%- assign alt = include.alt | default: cap -%}
+{%- assign cap = include.caption -%}
+{%- assign alt = include.alt | default: include.title | default: cap -%}
+{%- assign class = include.class | default: "img" -%}
+{%- assign title = include.title  -%}
 
 {%- comment -%}
   Supports both relative and absolute paths:
@@ -23,7 +25,7 @@
 {%- assign full_path = "/" | append: src_dir | append: "/images/full/" | append: src_file -%}
 {%- assign href = include.href | default: full_path -%}
 
-<figure class="img">
+<figure class="{{ class }}">
   <a href="{{ href }}" rel="noopener">
     <img
       src="{{ thumb_path }}"
@@ -32,5 +34,8 @@
       decoding="async"
     >
   </a>
-  {%- if cap -%}<figcaption>{{ cap }}</figcaption>{%- endif -%}
+  <figcaption>
+    {%- if title -%}<a class="title" href="{{ href }}" rel="noopener">{{ title }}</a>{% endif -%}
+    {{ cap }}
+  </figcaption>
 </figure>

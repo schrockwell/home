@@ -11,12 +11,11 @@ So here's my simple, standardized, reproducible, inexpensive playbook for easy d
 
 ## Hosting
 
-Nearly everything is on [DigitalOcean](https://m.do.co/c/93be971f59d7).
+I use [DigitalOcean](https://m.do.co/c/93be971f59d7). Linode could work too.
 
 - **VM**: one [DigitalOcean](https://m.do.co/c/93be971f59d7) Droplet
   - 2 GB RAM / 50 GB disk ($12/mo + $3/mo for backups)
-- **Database**: [DigitalOcean](https://m.do.co/c/93be971f59d7) managed Postgres
-  - 1 GB RAM / 1vCPU / 10 GB disk ($15/mo)
+- **Database**: SQLite (free)
 - **Storage**: [DigitalOcean](https://m.do.co/c/93be971f59d7) Spaces Object Storage ($5/mo)
 - **Domains and DNS**: [Hover](https://hover.com/7SJP3hBt) and [DigitalOcean](https://m.do.co/c/93be971f59d7)
 
@@ -26,20 +25,24 @@ Nearly everything is on [DigitalOcean](https://m.do.co/c/93be971f59d7).
 
 Secret environment variables like API keys are manged by [SSE](https://github.com/schrockwell/sse), a tool I wrote to fulfill this exact need.
 
-In **development**, [direnv](https://direnv.net/) automatically loads the secrets into the shell.
+### In Development
 
-*.envrc*
+[direnv](https://direnv.net/) automatically loads the secrets into the shell.
 
 ```sh
+# --- .envrc ---
+
 #! /bin/bash
 eval "$(sse load)"
 ```
 
-In **production**, the `sse` binary is included in the production Docker image. The entrypoint script loads the variables before starting the server.
+### In Production
 
-*bin/entrypoint*
+The `sse` binary is included in the production Docker image. The entrypoint script loads the variables before starting the server.
 
 ```sh
+# --- bin/entrypoint ---
+
 #! /bin/bash
 eval "$(sse load production)"
 exec "$@"
@@ -77,9 +80,59 @@ registry:
 
 ---
 
+## SQLite
+
+SQLite is great for little self-hosted projects. And it's free!
+
+Create directories on the host OS like `/var/lib/kamal/myapp/data` and mount them as volumes.
+
+```yaml
+# --- config/deploy.yml ---
+
+volumes:
+  -/var/lib/kamal/myapp/data:/app/data
+```
+
+And in the app simply point SQLite to `/app/data/myapp_prod.db`.
+
+### File Permissions
+
+To ensure the mounted directories have the correct permissions to be accessed by the container, `chown nobody:nogroup` on the host OS, and specify `USER nobody` in the Dockerfile.
+
+### Web Interface
+
+To temporarily start a web-based web management UI for SQLite, here's a shell script to spin up `sqlite-web` in Docker on port 8080 (open the port only to your IP).
+
+```sh
+# --- /var/lib/kamal/sqlite-web.sh ---
+
+#! /bin/bash
+
+DATABASE_PATHS=$(find . -type f \( -iname "*.sqlite" -o -iname "*.db" \) -printf '%P ')
+
+echo "Started sqlite-web at http://example.com:8080/"
+
+docker run -it --rm \
+        -p 8080:8080 \
+        -v /var/lib/kamal:/data \
+        ghcr.io/coleifer/sqlite-web:latest \
+        $DATABASE_PATHS
+```
+
+---
+
 ## Miscellaneous
 
 On macOS, use [OrbStack](https://orbstack.dev/) instead of Docker Desktop. It's way nicer, and also supports VMs.
+
+Some Elixir dependencies have trouble in a cross-compiling environment. Here's the fix, applied during the build phase:
+
+```Dockerfile
+# --- Dockerfile ---
+
+# Disable BEAM JIT to avoid QEMU emulation bugs during cross-compilation
+ENV ERL_FLAGS="+JPperf true"
+```
 
 ---
 
@@ -93,8 +146,9 @@ On macOS, use [OrbStack](https://orbstack.dev/) instead of Docker Desktop. It's 
 
 The amazing [lipanski/docker-static-website](https://github.com/lipanski/docker-static-website) image is perfect for serving up static content. It uses [BusyBox](https://busybox.net/) httpd and is only 80 KB!
 
-*Dockerfile*
 ```Dockerfile
+# --- Dockerfile ---
+
 # --- Production stage ---
 FROM ruby:3.3.5-alpine AS builder
 
@@ -114,9 +168,11 @@ FROM lipanski/docker-static-website:latest
 COPY --from=builder /site/_site/ .
 ```
 
-*config/deploy.yml* (Kamal config)
+Kamal config:
 
 ```yaml
+# --- config/deploy.yml ---
+
 service: myapp
 
 image: myname/myapp
@@ -139,9 +195,10 @@ builder:
   arch: amd64
 ```
 
-*_config.yml* (Jekyll config)
+Jekyll config:
 
 ```yaml
+# --- _config.yml ---
 exclude:
   - config/deploy.yml
 ```

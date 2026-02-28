@@ -42,6 +42,8 @@ The end result is a single-serving app that is super fun to use. I love seeing g
 
 ## Palm Handhelds
 
+{% include img.html src="/retro/visor.jpeg" href="/retro/palm.html" %}
+
 In the same low-fi-tech vein, I picked up a [Handspring Visor](https://en.wikipedia.org/wiki/Handspring,_Inc.#Visor_and_Visor_Deluxe) off eBay for nostalgia's sake. I've been [documenting resources](/retro/palm.html) as I find them.
 
 It turns out that [someone wrote a TypeScript library](https://github.com/jichu4n/palm-sync) that communicates directly with Palm devices *in the browser*. Whoa.

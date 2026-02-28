@@ -2,15 +2,15 @@
 title: Retro tech
 ---
 
-[FTP servers and clients](/retro/ftp.html)
+{% include img.html class="card" src="/dev/hosting.jpeg" href="/retro/ftp.html" title="FTP servers and clients" caption="For transferring files to older devices" %}
 
-[Modern AIM & ICQ](/retro/aim.html)
+{% include img.html class="card" src="/retro/aim.png" href="/retro/aim.html" title="Modern AIM & ICQ" caption="Instant messaging in the 2020's" %}
 
-[Classic Mac resources](/retro/mac.html)
+{% include img.html class="card" src="/retro/mac.jpeg" href="/retro/mac.html" title="Classic Mac resources" caption="Keeping the all-in-ones alive" %}
 
-[Access HFS floppies with hfsutils](/retro/hfsutils.html)
+{% include img.html class="card" src="/retro/floppies.jpeg" href="/retro/hfsutils.html" title="Reading HFS floppies on Modern macOS" caption="Using hfsutils to read old 1.44 MB floppies" %}
 
-[Palm handhelds](/retro/palm.html)
+{% include img.html class="card" src="/retro/visor.jpeg" href="/retro/palm.html" title="Palm handhelds" caption="Playing with classic Palm OS devices" %}
 
 ---
 

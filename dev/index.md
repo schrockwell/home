@@ -2,7 +2,7 @@
 title: Programming resources
 ---
 
-[How I host web applications](/dev/hosting.html) in {{ "now" | date: "%Y" }}
+{% include img.html class="card" src="/dev/hosting.jpeg" href="/dev/hosting.html" title="Hosting" caption="How I serve up personal web applications" %}
 
 {% include img.html class="card" src="/dev/gbcmr/hero.jpeg" href="/dev/gbcmr.html" title="GBCMR" caption="Pairing Game Boy Camera with TRMNL" %}
 
